@@ -40,4 +40,6 @@ RUN git clone https://github.com/diydrones/apm_planner && \
     cd / && \
     chmod +x /*.sh && \
     gpasswd -a root dialout && \
-    ln -s /start_apmplanner2.sh /usr/sbin/apmplanner2
+    ln -s /start_apmplanner2.sh /usr/sbin/apmplanner2 && \
+    mkdir -p /root/.config/ardupilot/ && \
+    mv /apm_planner.ini "/root/.config/ardupilot/APM Planner.ini"
