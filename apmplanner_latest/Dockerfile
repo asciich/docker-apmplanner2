@@ -31,15 +31,12 @@ RUN apt-get update && \
 
 COPY ./files/* /
 
-RUN git clone https://github.com/diydrones/apm_planner && \
-    cd /apm_planner && \
-    git checkout 2.0.26 && \
+RUN git clone https://github.com/diydrones/apm_planner
+RUN cd /apm_planner && \
+    git checkout master && \
     qmake apm_planner.pro && \
-    make -j && \
-    \
-    cd / && \
-    chmod +x /*.sh && \
+    make
+
+RUN chmod +x /*.sh && \
     gpasswd -a root dialout && \
-    ln -s /start_apmplanner2.sh /usr/sbin/apmplanner2 && \
-    mkdir -p /root/.config/ardupilot/ && \
-    mv /apm_planner.ini "/root/.config/ardupilot/APM Planner.ini"
+    ln -s /start_apmplanner2.sh /usr/sbin/apmplanner2

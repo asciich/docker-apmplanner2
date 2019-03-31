@@ -1,6 +1,7 @@
-# APM Planner 2.0.26 Container
+# APM Planner latest Container
 
-This container allows to run the APM Planner2.0.26 graphical control software for ArduPilot controllers/ UAV's.
+This container allows to run the APM Planner2 graphical control software for ArduPilot controllers/ UAV's.
+It bases the version of the latest master commit of APM Planner2
 
 ## Build container
 
