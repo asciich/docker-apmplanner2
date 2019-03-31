@@ -2,4 +2,4 @@
 
 set -e
 
-docker build --tag asciich/apmplanner2:latest .
+docker build --tag asciich/apmplanner2:2.0.26 .
