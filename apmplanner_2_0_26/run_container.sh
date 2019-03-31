@@ -10,4 +10,4 @@ ENVIRONMENT="-e DISPLAY=${DISPLAY}"
 ENVIRONMENT="${ENVIRONMENT} -e XAUTHORITY=${XAUTHORITY}"
 CONTAINER=asciich/apmplanner2:2.0.26
 
-docker run --rm --net=host --privileged ${VOLUMES} ${ENVIRONMENT} -it ${CONTAINER} bash
+docker run --rm --net=host --privileged ${VOLUMES} ${ENVIRONMENT} -it ${CONTAINER} /start_apmplanner2.sh
